@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: shahedaa/pyapp:db_image
+    image: shahedaa/pyapp:db_img
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: shahedaa/pyapp:auth_image
+    image: shahedaa/pyapp:auth_img
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: shahedaa/pyapp:book_image
+    image: shahedaa/pyapp:book_img
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: shahedaa/pyapp:borrow_image
+    image: shahedaa/pyapp:borrow_img
     deploy:
       replicas: 1
     ports:
